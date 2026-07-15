@@ -1,5 +1,6 @@
 # SQL Analytics Portfolio — From Practice to Production
-**NOTE: AI was used for scaffolding/planning this portfolio, not for the conclusions themselves.
+**NOTE:** AI was used for scaffolding/planning this portfolio, not for the conclusions themselves.
+
 **Tools:** SQL (Snowflake), Python (Pandas, Matplotlib), Streamlit  
 **Goal:** Build SQL fluency on a structured sample dataset, then apply every skill to a real-world e-commerce dataset and answer genuine business questions.
 
