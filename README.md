@@ -23,10 +23,10 @@ This portfolio has two stages — intentionally. Stage 1 is where the syntax bec
 | GROUP BY / HAVING | ✅ Done |
 | Subqueries | ✅ Done |
 | Window functions (ROW_NUMBER, PARTITION BY) | ✅ Done |
-| CASE statements | 🔲 In progress |
-| CTEs | 🔲 Up next |
+| CASE statements | ✅ Done |
+| CTEs | ✅ Done |
 
-**Practice files:** See `/practice/broken_queries.sql` — each query has deliberate bugs to find and fix. This is the rep that makes syntax stick.
+**Practice files:** See `/practice/broken_queries.sql` — each query has deliberate bugs to find and fix. 
 
 ---
 
