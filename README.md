@@ -1,18 +1,18 @@
-# SQL Analytics Portfolio — From Practice to Production
+# SQL Analytics Portfolio - From Practice to Production
 **NOTE:** AI was used for scaffolding/planning this portfolio, not for the conclusions themselves.
 
 **Tools:** SQL (Snowflake), Python (Pandas, Matplotlib), SQLLite  
 **Goal:** Build SQL fluency on a structured sample dataset, then apply every skill to a real-world e-commerce dataset and answer genuine business questions.
 
-This portfolio has two stages — intentionally. Stage 1 is where the syntax becomes reflexive. Stage 2 is where it becomes useful.
+This portfolio has two stages - intentionally. Stage 1 is where the syntax becomes reflexive. Stage 2 is where it becomes useful.
 
 ---
 
-## Stage 1 — SQL Fluency on Sample Data (TPC-H / Snowflake)
+## Stage 1 - SQL Fluency on Sample Data (TPC-H / Snowflake)
 
-**Dataset:** Snowflake's built-in `SNOWFLAKE_SAMPLE_DATA.TPCH_SF1` — a standardized benchmark database with customers, orders, lineitems, suppliers, and parts. Relational, clean, zero setup.
+**Dataset:** Snowflake's built-in `SNOWFLAKE_SAMPLE_DATA.TPCH_SF1` - a standardized benchmark database with customers, orders, lineitems, suppliers, and parts. Relational, clean, zero setup.
 
-**Why this first:** Real datasets have messy schemas, nulls, and ambiguous relationships. Learning syntax on clean data means errors come from you, not the data — which is how you actually learn.
+**Why this first:** Real datasets have messy schemas, nulls, and ambiguous relationships. Learning syntax on clean data means errors come from you, not the data - which is how you actually learn.
 
 ### Concepts practiced and verified
 
@@ -26,15 +26,15 @@ This portfolio has two stages — intentionally. Stage 1 is where the syntax bec
 | CASE statements | ✅ Done |
 | CTEs | ✅ Done |
 
-**Practice files:** See `/practice/broken_queries.sql` — each query has deliberate bugs to find and fix. 
+**Practice files:** See `/practice/broken_queries.sql` - each query has deliberate bugs to find and fix. 
 
 ---
 
-## Stage 2 — Real Analysis on Olist E-Commerce Data
+## Stage 2 - Real Analysis on Olist E-Commerce Data
 
-**Dataset:** [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — ~100k real, anonymized orders across 9 relational tables (2016–2018). Customers, sellers, products, payments, reviews, geolocation.
+**Dataset:** [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)-— ~100k real, anonymized orders across 9 relational tables (2016–2018). Customers, sellers, products, payments, reviews, geolocation.
 
-**Why this second:** Same SQL skills as Stage 1 — applied to a schema with real ambiguity, real nulls, and real business questions that don't have obvious answers until you query them.
+**Why this second:** Same SQL skills as Stage 1 - applied to a schema with real ambiguity, real nulls, and real business questions that don't have obvious answers until you query them.
 
 ### Business Questions Answered
 
@@ -51,7 +51,7 @@ This portfolio has two stages — intentionally. Stage 1 is where the syntax bec
 ## Key Findings
 
 ### Data Quality Audit
-Audited 99,441 orders before analysis — identified 3% missing delivery
+Audited 99,441 orders before analysis - identified 3% missing delivery
 dates (2,965 records), excluded from time-sensitive queries. Confirmed
 zero duplicate order IDs, zero zero/negative prices across 112,650 items,
 and zero logically impossible delivery dates. Dataset is reliable with
@@ -62,7 +62,7 @@ one known gap in delivery data.
 ### Q1: Does delivery delay predict lower review scores?
 Yes, strongly. On-time orders averaged 4.29 stars. Orders 1-3 days late
 dropped to 3.77. Orders 4-7 days late fell to 2.32. Orders over one week
-late averaged 1.73 — a 2.56 point drop from on-time. Delivery timeliness
+late averaged 1.73 - a 2.56 point drop from on-time. Delivery timeliness
 is the single biggest lever on customer satisfaction in this dataset.
 
 | Delay Bucket     | Orders | Avg Review Score |
@@ -77,7 +77,7 @@ is the single biggest lever on customer satisfaction in this dataset.
 ### Q2: Which product categories drive the most revenue?
 Beauty & health (beleza_saude) led total revenue at $1.44M across 8,836
 orders at an avg item price of $130. Watches & gifts (relogios_presentes)
-had the highest avg item price at $201 with 5,624 orders — a premium
+had the highest avg item price at $201 with 5,624 orders - a premium
 low-volume segment vs. a high-volume mid-price category. Two different
 business models in the top 2 rows.
 
@@ -94,7 +94,7 @@ business models in the top 2 rows.
 ### Q3: What does repeat purchase behavior look like?
 96% of customers purchased exactly once and never returned. Of ~99k
 customers, only 2,997 placed a second order. Olist's growth depends
-almost entirely on new customer acquisition — retention is near zero.
+almost entirely on new customer acquisition - retention is near zero.
 
 | Order Rank | Customers |
 |------------|-----------|
@@ -110,7 +110,7 @@ almost entirely on new customer acquisition — retention is near zero.
 São Paulo (SP) dominates with 1,849 sellers serving 68,227 customers at
 a 36.9 customers-per-seller ratio. States like Bahia (BA, 29.5 ratio)
 and Ceará (CE, 6.8 ratio) show far lower seller presence relative to
-demand — pointing to geographic expansion opportunities in underserved
+demand - pointing to geographic expansion opportunities in underserved
 regions.
 
 | State | Sellers | Customers | Customers per Seller |
